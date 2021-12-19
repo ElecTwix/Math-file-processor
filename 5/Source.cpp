@@ -1,9 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-
-
-
 using namespace std;
 int n, m;
 
@@ -56,7 +53,7 @@ double* readFromFile(const char* fileName, int& count)
 void outToFile(const char* filename, double* arr, int count)
 {
     ofstream out(filename);
-    for (int i = count - 1; i >= 0; i--)
+    for (int i = 0; i <= count - 1; i++)
     {
         out << arr[i] << " ";
     }
@@ -106,6 +103,7 @@ int main()
     {
         a[i] = new int[m];
     }
+
     double* arr = readFromFile("data.txt", count);
     
 
@@ -154,8 +152,8 @@ int main()
             }
         }
     }
-    cout << arr[0] << " <--- this one 0 ";
-    cout << arr[1] << " <--- this one 1";
+    // cout << arr[0] << " <--- this one 0 ";
+    // cout << arr[1] << " <--- this one 1";
 
     // Deallocation:
     for (int i = 0; i < n; i++)
